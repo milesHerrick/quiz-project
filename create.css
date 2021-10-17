@@ -3,17 +3,49 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
+    overflow-y: auto;
     flex-direction: column;
     margin: 200px;
+    position: relative;
+    height: 600px;
 }
 #addCheck{
-    background-color: aquamarine;
+    padding: 10px;
+    background-color: rgb(70, 69, 69);
+    color: rgb(184, 183, 183);
+    border: 0;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
 }
 .addNew{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 90vh;
+    position: absolute;
+    bottom: 20%;
+}
+
+.initial{
+    position: absolute;
+    top: 5%;
+    padding: 0;
+    border-collapse: collapse;
+    height: 500px;
+}
+body{
+    overflow-y: hidden;
+    background-color: rgb(184, 183, 183);
+}
+input[type=submit]{
+    padding: 10px;
+    background-color: rgb(70, 69, 69);
+    color: rgb(184, 183, 183);
+    border: 0;
+    position: fixed;
+    bottom: 2.5%;
+    left: 50%;
+}
+input[type=submit]:hover{
+    background-color: black;
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(184, 183, 183);
 }
 .navleft{
     position: fixed;

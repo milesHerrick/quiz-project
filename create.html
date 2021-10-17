@@ -10,7 +10,35 @@
     <script defer src="create.js"></script>
 </head>
 <body>
-    <div>
+    
+    <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
+        <form>
+            <div class="initial">
+                <p>Choose type of question.</p>
+                <input type="radio" id="multchoice" name="qtype" value="multchoice">
+                <label for="multchoice">Multiple Choice</label><br>
+                <input type="radio" id="selectmult" name="qtype" value="selectmult">
+                <label for="selectmult">Select Multiple</label><br>
+
+                <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
+
+                <input type="radio" id="multchoice" name="answers" value="question1"><input type="text" name="answers" placeholder="Question 1"/><br>
+                
+                <input type="radio" id="selectmult" name="answers" value="question2"><input type="text" name="answers" placeholder="Question 2"/><br>
+                
+                <input type="radio" id="multchoice" name="answers" value="question3"><input type="text" name="answers" placeholder="Question 3"/><br>
+                
+                <input type="radio" id="selectmult" name="answers" value="question4"><input type="text" name="answers" placeholder="Question 4"/><br>
+
+                <div id="addNew"></div>
+            </div>
+            
+                
+            </div>
+           <input type="submit" value="Submit Quiz"> 
+        </form>
+        
+        <div>
         <ul class="navleft">
             <li><a href="home.html">Home</a></li>
             <li><a href="join.html">Join</a></li>
@@ -21,28 +49,8 @@
             <li><a href="Login.html">Log In</a></li>
         </ul>
     </div>
-    <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
-        <form>
-            <p>Choose type of question.</p>
-            <input type="radio" id="multchoice" name="qtype" value="multchoice">
-            <label for="multchoice">Multiple Choice</label><br>
-            <input type="radio" id="selectmult" name="qtype" value="selectmult">
-            <label for="selectmult">Select Multiple</label><br>
+    <button id="addCheck">Add another question</button>
+    
 
-            <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
-
-            <input type="radio" id="multchoice" name="answers" value="question1"><input type="text" name="answers" placeholder="Question 1"/><br>
-            
-            <input type="radio" id="selectmult" name="answers" value="question2"><input type="text" name="answers" placeholder="Question 2"/><br>
-            
-            <input type="radio" id="multchoice" name="answers" value="question3"><input type="text" name="answers" placeholder="Question 3"/><br>
-            
-            <input type="radio" id="selectmult" name="answers" value="question4"><input type="text" name="answers" placeholder="Question 4"/><br>
-            
-            <div id="addNew"></div>
-        </form>
-        <button id="addCheck">Add another question</button>
-        
-    </div>
 </body>
 </html>
