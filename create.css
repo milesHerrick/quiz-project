@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    margin: 200px;
+}
+#addCheck{
+    background-color: aquamarine;
+}
+.addNew{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
