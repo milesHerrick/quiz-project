@@ -71,7 +71,7 @@ input[type=submit]:hover{
     background-color: black;
 }
 body{
-    background-color: rgb(184, 183, 183);
+    background-image: url('quiz.jpg');
 }
 label{
     font-size: 2em;

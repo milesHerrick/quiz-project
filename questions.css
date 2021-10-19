@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    flex-direction: column;
+    margin: 200px;
+    position: relative;
+    height: 600px;
+}
+.initial{
+    position: absolute;
+    top: 5%;
+    padding: 0;
+    border-collapse: collapse;
+    height: 500px;
+}
+body{
+    background-position: center;
+}
