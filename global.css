@@ -1,13 +1,13 @@
 *{
-	color: white !important;
+	color: white;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     /*background-color: rgb(184, 183, 183);*/
     background-image: url('quiz.jpg');
-    background-position: center;
-    background-size: cover;
+    background-position: center !important;
+    background-size: cover !important;
 }
 .navleft{
     position: fixed;
