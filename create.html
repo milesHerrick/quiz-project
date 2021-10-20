@@ -10,74 +10,47 @@
     <script defer src="create.js"></script>
 </head>
 <body>
-    <div class="flexbox">
-        <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
-            <form>
-                <div class="initial">
-                    
-                    <div class = questions>
-                        
-                        <p>Choose type of question.</p>
-                        <div class = selection>
-                            <label for="multchoice">
-                                <input type="radio" name="qtype" id="multchoice" value="multchoice" />
-                                Multiple Choice
-                            </label>
-                            <label for="selectmult">
-                                <input type="radio" name="qtype" id="selectmult" value="selectmult" />
-                                Select Multiple
-                            </label>
-                        </div>
+    
+    <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
+        <form>
+            <div class="initial">
+                <p>Choose type of question.</p>
+                <input type="radio" id="multchoice" name="qtype" value="multchoice">
+                <label for="multchoice">Multiple Choice</label><br>
+                <input type="radio" id="selectmult" name="qtype" value="selectmult">
+                <label for="selectmult">Select Multiple</label><br>
 
-                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
-                        
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question1">
-                            <input type="text" name="answers" placeholder="Question 1"/>
-                        </div>
-                        
-                        <div class = question> 
-                            <input type="radio" id="selectmult" name="answers" value="question2">
-                            <input type="text" name="answers" placeholder="Question 2"/>    
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question3">
-                            <input type="text" name="answers" placeholder="Question 3"/>
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="selectmult" name="answers" value="question4">
-                            <input type="text" name="answers" placeholder="Question 4"/>
-                        </div>
+                <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
 
-                        <div class = timer>
-                            <input type="radio" id="timerinvis" name="timerinvis" value="timerinvis">
-                            <input type="number" name="timer" class="timer1" placeholder="Time For This Question"/>
-                        </div>
-                        
-                    </div>
-                    
-                    <div id="addNew" class="addNew"></div>
-                </div>
-                    
-                </div>
-            <input type="submit" value="Submit Quiz"> 
-            </form>
+                <input type="radio" id="multchoice" name="answers" value="question1"><input type="text" name="answers" placeholder="Question 1"/><br>
+                
+                <input type="radio" id="selectmult" name="answers" value="question2"><input type="text" name="answers" placeholder="Question 2"/><br>
+                
+                <input type="radio" id="multchoice" name="answers" value="question3"><input type="text" name="answers" placeholder="Question 3"/><br>
+                
+                <input type="radio" id="selectmult" name="answers" value="question4"><input type="text" name="answers" placeholder="Question 4"/><br>
+
+                <div id="addNew"></div>
+            </div>
             
-            <div>
-            <ul class="navleft">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="create.html">Create</a></li>
-            </ul>
-            <ul class="navright">
-                <li><a href="SignUp.html">Sign Up</a></li>
-                <li><a href="Login.html">Log In</a></li>
-            </ul>
-        </div>
-        <button id="addCheck">Add Question</button>
+                
+            </div>
+           <input type="submit" value="Submit Quiz"> 
+        </form>
+        
+        <div>
+        <ul class="navleft">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="create.html">Create</a></li>
+        </ul>
+        <ul class="navright">
+            <li><a href="SignUp.html">Sign Up</a></li>
+            <li><a href="Login.html">Log In</a></li>
+        </ul>
     </div>
+    <button id="addCheck">Add Question</button>
+    
 
 </body>
 </html>

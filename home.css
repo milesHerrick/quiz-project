@@ -1,52 +1,48 @@
 #container{
-    height: 65vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90vh;
-    background-color: rgba(230, 212, 212, 0.5);
-    border-radius: 1em;
-}
-body{
-    overflow-y: hidden;
-}
-.flexbox{
-    height:90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	text-align: center;
     
-  }
+}
 h1{
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(70, 69, 69);
+    color: #FFFFFF;
 }
 p{
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(70, 69, 69);
+    color: #FFFFFF;
     font-weight: bold;
-    text-align: center;
 }
 #joinbtn, #createbtn{
-    position: fixed;
     padding: 10px;
-    background-color: rgb(70, 69, 69);
-    color: rgb(184, 183, 183);
+    background-color: #002f5d;
+    color: #FFFFFF;
     border: 0;
-    bottom: 10vh;
+    margin: 20px;
 }
 #createbtn:hover, #joinbtn:hover{
     background-color: black;
 }
-#joinbtn{
-    right: 52%;
-    margin-right: 10px;
+
+
+#homeCard {
+	margin-top: 10%;
+	width: 80%;
+	
+	#we can discuss this later
+	#border: 2px solid #002f5d;
+	#border-radius: 20px;
+	#backdrop-filter: blur(5px);
 }
-#createbtn{
-    float: right;
-    right: 45%;
+
+#homeButtons {
+	padding: 10px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
 }

@@ -10,62 +10,48 @@
 </head>
 <body>
     
-    
-    <div class="flexbox">
-        <div class="timerdisplay">
-            <p class="num">17</p>
-        </div>
-        <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
-            
-            <form>
-                <div class="initial">
-                    
-                    <div class = questions>
-                        
-
-                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Description of question:"></textarea><br>
-                        
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question1">
-                            <input type="text" name="answers" placeholder="Question 1"/>
-                        </div>
-                        
-                        <div class = question> 
-                            <input type="radio" id="selectmult" name="answers" value="question2">
-                            <input type="text" name="answers" placeholder="Question 2"/>    
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question3">
-                            <input type="text" name="answers" placeholder="Question 3"/>
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="selectmult" name="answers" value="question4">
-                            <input type="text" name="answers" placeholder="Question 4"/>
-                        </div>
-
-                        
-                    </div>
-                    
-                    <div id="addNew" class="addNew"></div>
-                </div>
-                    
-                </div>
-            <input type="submit" value="Submit Answer"> 
-            </form>
-            
-            <div>
-            <ul class="navleft">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="create.html">Create</a></li>
-            </ul>
-            <ul class="navright">
-                <li><a href="SignUp.html">Sign Up</a></li>
-                <li><a href="Login.html">Log In</a></li>
-            </ul>
-        </div>
+    <div class="container">
+		<div class="prompt"> 
+			<h2> When is the midterm for CS330? </h2>
+		</div>
+        <section>
+			<div>
+				<input type="radio" id="control_01" name="select" value="1" checked>
+				<label for="control_01">
+					<p>October 22, 2021</p>
+				</label>
+			</div>
+			<div>
+				<input type="radio" id="control_02" name="select" value="2">
+				<label for="control_02">
+					<p>Today</p>
+				</label>
+			</div>
+			<div>
+				<input type="radio" id="control_03" name="select" value="3">
+				<label for="control_03">
+					<p>October 25, 2021</p>
+				</label>
+			</div>
+		
+			<div>
+				<input type="radio" id="control_04" name="select" value="4">
+				<label for="control_04">
+					<p>October 22, 2022</p>
+				</label>
+			</div>
+		</section>
+    </div>
+    <div>
+        <ul class="navleft">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="create.html">Create</a></li>
+        </ul>
+        <ul class="navright">
+            <li><a href="SignUp.html">Sign Up</a></li>
+            <li><a href="Login.html">Log In</a></li>
+        </ul>
     </div>
 </body>
 </html>
