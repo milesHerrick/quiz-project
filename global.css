@@ -5,7 +5,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     /*background-color: rgb(184, 183, 183);*/
-    background-image: url('../assets/quiz.jpg');
+    background-image: url('quiz.jpg');
     background-position: center;
     background-size: cover;
 }
