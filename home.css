@@ -1,19 +1,39 @@
 #container{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('quiz.jpg');
-   
-    background-position: 25%;
-    background-size: cover;
+    
 }
 h1{
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
     color:rgb(70, 69, 69);
 }
-body{
-    background-image: url('quizbackground.jpg');
+p{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(70, 69, 69);
+    font-weight: bold;
+}
+#joinbtn, #createbtn{
+    position: fixed;
+    padding: 10px;
+    background-color: rgb(70, 69, 69);
+    color: rgb(184, 183, 183);
+    border: 0;
+    
+}
+#createbtn:hover, #joinbtn:hover{
+    background-color: black;
+}
+#joinbtn{
+    bottom: 30%;
+    right: 52%;
+}
+#createbtn{
+    float: right;
+    bottom: 30%;
+    right: 45%;
 }

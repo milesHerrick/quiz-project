@@ -5,9 +5,7 @@
     justify-content: center;
     overflow-y: auto;
     flex-direction: column;
-    margin: 200px;
-    position: relative;
-    height: 600px;
+    height: 90vh;
 }
 #addCheck{
     padding: 10px;
@@ -15,24 +13,25 @@
     color: rgb(184, 183, 183);
     border: 0;
     position: fixed;
-    bottom: 10%;
-    left: 50%;
+    bottom: 7%;
+    left: 45%;
 }
 .addNew{
     position: absolute;
-    bottom: 20%;
+    
 }
 
 .initial{
     position: absolute;
-    top: 5%;
+    top: 20%;
+    left: 45%;
     padding: 0;
     border-collapse: collapse;
-    height: 500px;
+    height: 60vh;
+    overflow-y: scroll;
 }
 body{
     overflow-y: hidden;
-    background-color: rgb(184, 183, 183);
 }
 input[type=submit]{
     padding: 10px;
@@ -41,7 +40,10 @@ input[type=submit]{
     border: 0;
     position: fixed;
     bottom: 2.5%;
-    left: 50%;
+    left: 45%;
+}
+#addCheck:hover{
+    background-color: black;
 }
 input[type=submit]:hover{
     background-color: black;
