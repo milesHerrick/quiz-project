@@ -60,15 +60,21 @@ input[type=submit]{
 
 
 
-#selection{
+.selection{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+#options{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #questions{
     display: flex;
-    justify-content: space-evenly;
+    
 }
 
 textarea{
@@ -83,7 +89,9 @@ textarea{
     
 }
 
-
+.question{
+    width: 50%; 
+}
 
 #addCheck:hover{
     background-color: black;
