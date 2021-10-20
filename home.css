@@ -4,9 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vh;
+    width: 90vh;
     background-color: rgba(230, 212, 212, 0.5);
     border-radius: 1em;
+}
+body{
+    overflow-y: hidden;
 }
 .flexbox{
     height:90vh;
@@ -26,6 +29,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     color:rgb(70, 69, 69);
     font-weight: bold;
+    text-align: center;
 }
 #joinbtn, #createbtn{
     position: fixed;
@@ -33,13 +37,14 @@ p{
     background-color: rgb(70, 69, 69);
     color: rgb(184, 183, 183);
     border: 0;
-    bottom: 25%;
+    bottom: 10vh;
 }
 #createbtn:hover, #joinbtn:hover{
     background-color: black;
 }
 #joinbtn{
     right: 52%;
+    margin-right: 10px;
 }
 #createbtn{
     float: right;
