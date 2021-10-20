@@ -42,6 +42,19 @@ p{
     justify-content: center;
 }
 
+#selection{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#questions{
+    display: flex;
+}
+
+textarea{
+    width: 95%;
+}
 .initial{
     padding-top: 20%;
     border-collapse: collapse;
