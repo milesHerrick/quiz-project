@@ -53,8 +53,8 @@ input{
 input[type=submit]{
     padding: 10px;
     border: 0;
-    background-color: rgb(70, 69, 69);
-    color: rgb(184, 183, 183);
+    background-color: #002f5d;;
+    color: white;
 }
 input[type=submit]:hover{
     background-color: black;
@@ -62,5 +62,6 @@ input[type=submit]:hover{
 label{
     font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
-  color:rgb(70, 69, 69);
+  color:white;
+  -webkit-text-stroke: 1px black;
 }

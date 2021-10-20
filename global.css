@@ -1,8 +1,6 @@
-*{
-	color: white !important;
-}
 
 body{
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     /*background-color: rgb(184, 183, 183);*/
     background-image: url('quiz.jpg');
@@ -48,6 +46,6 @@ li a:hover{
 }
 
 h1{
-    /*margin-bottom: 50px;*/
+    color: white;
     -webkit-text-stroke: 1.25px black;
 }

@@ -20,19 +20,37 @@
 p{
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(70, 69, 69);
+    color:white;
 }
 
 #addCheck{
-    padding: 10px;
-    background-color: #002f5d;
-    color: rgb(184, 183, 183);
-    border: 0;
     position: fixed;
-    bottom: 7%;
-    left: 45%;
-    width: 110px;
-    font-family: Arial, Helvetica, sans-serif;
+    bottom: 2%;
+    left: 33%;
+
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
+}
+
+input[type=submit]{
+    position: fixed;
+    bottom: 2%;
+    right: 33%;
+
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
 }
 
 .addNew{
@@ -42,6 +60,8 @@ p{
     justify-content: center;
 }
 
+
+
 #selection{
     width: 100%;
     display: flex;
@@ -50,6 +70,7 @@ p{
 
 #questions{
     display: flex;
+    justify-content: space-evenly;
 }
 
 textarea{
@@ -64,17 +85,7 @@ textarea{
     
 }
 
-input[type=submit]{
-    padding: 10px;
-    background-color: #002f5d;
-    color: rgb(184, 183, 183);
-    border: 0;
-    position: fixed;
-    bottom: 2.5%;
-    left: 45%;
-    width: 110px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 #addCheck:hover{
     background-color: black;
