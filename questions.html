@@ -10,31 +10,62 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="initial">
-            <form>
-                <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
-
-                <input type="radio" id="multchoice" name="answers" value="question1"><input type="text" name="answers" placeholder="Question 1"/><br>
-
-                <input type="radio" id="selectmult" name="answers" value="question2"><input type="text" name="answers" placeholder="Question 2"/><br>
-
-                <input type="radio" id="multchoice" name="answers" value="question3"><input type="text" name="answers" placeholder="Question 3"/><br>
-
-                <input type="radio" id="selectmult" name="answers" value="question4"><input type="text" name="answers" placeholder="Question 4"/><br>
-            </form>
+    
+    <div class="flexbox">
+        <div class="timerdisplay">
+            <p class="num">17</p>
         </div>
-    </div>
-    <div>
-        <ul class="navleft">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="create.html">Create</a></li>
-        </ul>
-        <ul class="navright">
-            <li><a href="SignUp.html">Sign Up</a></li>
-            <li><a href="Login.html">Log In</a></li>
-        </ul>
+        <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
+            
+            <form>
+                <div class="initial">
+                    
+                    <div class = questions>
+                        
+
+                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Description of question:"></textarea><br>
+                        
+                        <div class = question>
+                            <input type="radio" id="multchoice" name="answers" value="question1">
+                            <input type="text" name="answers" placeholder="Question 1"/>
+                        </div>
+                        
+                        <div class = question> 
+                            <input type="radio" id="selectmult" name="answers" value="question2">
+                            <input type="text" name="answers" placeholder="Question 2"/>    
+                        </div>
+                        
+                        <div class = question>
+                            <input type="radio" id="multchoice" name="answers" value="question3">
+                            <input type="text" name="answers" placeholder="Question 3"/>
+                        </div>
+                        
+                        <div class = question>
+                            <input type="radio" id="selectmult" name="answers" value="question4">
+                            <input type="text" name="answers" placeholder="Question 4"/>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <div id="addNew" class="addNew"></div>
+                </div>
+                    
+                </div>
+            <input type="submit" value="Submit Answer"> 
+            </form>
+            
+            <div>
+            <ul class="navleft">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="create.html">Create</a></li>
+            </ul>
+            <ul class="navright">
+                <li><a href="SignUp.html">Sign Up</a></li>
+                <li><a href="Login.html">Log In</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

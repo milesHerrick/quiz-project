@@ -44,6 +44,12 @@ function addQuestion(){
 
     //Probably going to have to change around id values when setting up database
     //Creates new question answer areas
+    var newDiv = document.createElement("div");
+    newDiv.setAttribute("class", "question");
+
+    var selectDiv = document.createElement("div");
+    selectDiv.setAttribute("class", "question");
+
     var questionone = document.createElement("input");
     questionone.setAttribute("type", "radio");
     questionone.setAttribute("id", "multchoice");
@@ -88,37 +94,57 @@ function addQuestion(){
     questionfourlabel.setAttribute("name", answers);
     questionfourlabel.setAttribute("placeholder", "Question 4");
 
+    var timerinvis = document.createElement("input");
+    timerinvis.setAttribute("type", "radio");
+    timerinvis.setAttribute("id", "timerinvis");
+    timerinvis.setAttribute("name", "timerinvis");
+    timerinvis.setAttribute("value", "timerinvis");
+
+    var timer = document.createElement("input");
+    timer.setAttribute("type", "number");
+    timer.setAttribute("name", "timer");
+    timer.setAttribute("placeholder", "Time For This Question");
+
     //Puts all of the new inputs and labels into the HTML file
     document.getElementById("addNew").appendChild(choosetext);
-    document.getElementById("addNew").appendChild(multradio);
-    document.getElementById("addNew").appendChild(multlabel);
-    document.getElementById("addNew").appendChild(selectradio);
-    document.getElementById("addNew").appendChild(selectlabel);
-    document.getElementById("addNew").appendChild(linebreak);
+
+    selectDiv.appendChild(multradio);
+    selectDiv.appendChild(multlabel);
+    selectDiv.appendChild(selectradio);
+    selectDiv.appendChild(selectlabel);
+    selectDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
+    document.getElementById("addNew").appendChild(selectDiv);
 
     document.getElementById("addNew").appendChild(textarea);
     document.getElementById("addNew").appendChild(linebreak);
     linebreak = document.createElement("br");
 
-    document.getElementById("addNew").appendChild(questionone);
-    document.getElementById("addNew").appendChild(questiononelabel);
-    document.getElementById("addNew").appendChild(linebreak);
+    newDiv.appendChild(questionone);
+    newDiv.appendChild(questiononelabel);
+    newDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
 
-    document.getElementById("addNew").appendChild(questiontwo);
-    document.getElementById("addNew").appendChild(questiontwolabel);
-    document.getElementById("addNew").appendChild(linebreak);
+    newDiv.appendChild(questiontwo);
+    newDiv.appendChild(questiontwolabel);
+    newDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
 
-    document.getElementById("addNew").appendChild(questionthree);
-    document.getElementById("addNew").appendChild(questionthreelabel);
-    document.getElementById("addNew").appendChild(linebreak);
+    newDiv.appendChild(questionthree);
+    newDiv.appendChild(questionthreelabel);
+    newDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
 
-    document.getElementById("addNew").appendChild(questionfour);
-    document.getElementById("addNew").appendChild(questionfourlabel);
-    document.getElementById("addNew").appendChild(linebreak);
+    newDiv.appendChild(questionfour);
+    newDiv.appendChild(questionfourlabel);
+    newDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
+
+    newDiv.appendChild(timerinvis);
+    newDiv.appendChild(timer);
+    newDiv.appendChild(linebreak);
+    linebreak = document.createElement("br");
+
+    document.getElementById("addNew").appendChild(newDiv);
 
 }
