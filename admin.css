@@ -11,9 +11,8 @@
     */
 
 }
-
-.box {
-    height: 90vh;
+.box{
+    height:90vh;
     font-family: Arial, Helvetica, sans-serif;
 	display: flex;
 	align-items: center;
