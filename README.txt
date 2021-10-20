@@ -22,6 +22,6 @@ To-Do for Quiz Manager
 ----------------------------------------------------------------------------------
 - Add timer to questions in join menu
 - Add admin tools (see scores, manage quizzes, see results)
-- Add other question types (Short Answer, 
+- Add other question types (Short Answer)
 - Add "Forgot Password"
 - Reformat Create page
