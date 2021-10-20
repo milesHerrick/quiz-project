@@ -18,6 +18,7 @@
                     <div class = questions>
                         
                         <h2>Choose type of question.</h2>
+
                         <div class = selection>
                             <label for="multchoice">
                                 <input type="radio" name="qtype" id="multchoice" value="multchoice" />
@@ -35,25 +36,29 @@
 
                         <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
                         
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question1">
-                            <input type="text" name="answers" placeholder="Question 1"/>
+                        <div id = options>
+                            <div class = question>
+                                <input type="radio" id="multchoice" name="answers" value="question1">
+                                <input type="text" name="answers" placeholder="Question 1"/>
+                            </div>
+                            
+                            <div class = question> 
+                                <input type="radio" id="selectmult" name="answers" value="question2">
+                                <input type="text" name="answers" placeholder="Question 2"/>    
+                            </div>
+                            
+                            <div class = question>
+                                <input type="radio" id="multchoice" name="answers" value="question3">
+                                <input type="text" name="answers" placeholder="Question 3"/>
+                            </div>
+                            
+                            <div class = question>
+                                <input type="radio" id="selectmult" name="answers" value="question4">
+                                <input type="text" name="answers" placeholder="Question 4"/>
+                            </div>
+
                         </div>
                         
-                        <div class = question> 
-                            <input type="radio" id="selectmult" name="answers" value="question2">
-                            <input type="text" name="answers" placeholder="Question 2"/>    
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="multchoice" name="answers" value="question3">
-                            <input type="text" name="answers" placeholder="Question 3"/>
-                        </div>
-                        
-                        <div class = question>
-                            <input type="radio" id="selectmult" name="answers" value="question4">
-                            <input type="text" name="answers" placeholder="Question 4"/>
-                        </div>
 
                         <div class = timer>
                             <input type="radio" id="timerinvis" name="timerinvis" value="timerinvis">
