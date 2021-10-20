@@ -9,11 +9,13 @@ function addQuestion(){
     var linebreak = document.createElement("br");
 
     //Appends the text to the top
-    var choosetext = document.createElement("p");
+    var choosetext = document.createElement("h2");
     var t = document.createTextNode("Choose type of question.");
     choosetext.appendChild(t);
-    
+
     //Creates new question type radio buttons and labels
+
+    //multiple choice
     var multradio = document.createElement("input");
     multradio.setAttribute("type", "radio");
     multradio.setAttribute("id", "multchoice");
@@ -24,6 +26,7 @@ function addQuestion(){
     multlabel.htmlFor = "multchoice";
     multlabel.innerHTML = "Multiple Choice";
 
+    //select multiple
     var selectradio = document.createElement("input");
     selectradio.setAttribute("type", "radio");
     selectradio.setAttribute("id", "selectmult");
@@ -33,6 +36,17 @@ function addQuestion(){
     var selectlabel = document.createElement("label");
     selectlabel.htmlFor = "selectmult";
     selectlabel.innerHTML = "Select Multiple";
+
+    //short answer
+    var shortradio = document.createElement("input");
+    shortradio.setAttribute("type", "radio");
+    shortradio.setAttribute("id", "shortans");
+    shortradio.setAttribute("name", qtype);
+    shortradio.setAttribute("value", "shortans");
+
+    var shortlabel = document.createElement("label");
+    shortlabel.htmlFor = "shortans";
+    shortlabel.innerHTML = "Short Answer";
 
     //Creates new description area
     var textarea = document.createElement("textarea");
@@ -112,6 +126,8 @@ function addQuestion(){
     selectDiv.appendChild(multlabel);
     selectDiv.appendChild(selectradio);
     selectDiv.appendChild(selectlabel);
+    selectDiv.appendChild(shortradio);
+    selectDiv.appendChild(shortlabel);
     selectDiv.appendChild(linebreak);
     linebreak = document.createElement("br");
     document.getElementById("addNew").appendChild(selectDiv);
