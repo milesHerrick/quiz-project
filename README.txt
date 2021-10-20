@@ -1,3 +1,5 @@
+Project Description (FOLLOW CLOSELY)
+---------------------------------------------------------------------------------
 This Java-based application proposes to create an online discussion platform 
 that  will  consist  of  a  wide  range  of  questions  on  different  topics,  fields,  and 
 subjects. By creating a user-friendly environment of Bluebook 
@@ -13,3 +15,13 @@ password. While admins can create an “n” number of participating teams for a
 quiz, they can also set an “n” number of rounds for the quiz. All the participants 
 will  automatically  receive  the  questions,  and  the  teams  will  have  to  answer 
 within an allotted time.
+
+
+
+To-Do for Quiz Manager
+----------------------------------------------------------------------------------
+- Add timer to questions in join menu
+- Add admin tools (see scores, manage quizzes, see results)
+- Add other question types (Short Answer, 
+- Add "Forgot Password"
+- Reformat Create page
