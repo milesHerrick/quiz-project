@@ -1,3 +1,5 @@
+Project Description (FOLLOW CLOSELY)
+---------------------------------------------------------------------------------
 This Java-based application proposes to create an online discussion platform 
 that  will  consist  of  a  wide  range  of  questions  on  different  topics,  fields,  and 
 subjects. By creating a user-friendly environment of Bluebook 

@@ -1,15 +1,13 @@
 .container{
-    position:absolute;
     top: 10vh;
-    background-color: rgba(230, 212, 212, 0.5);
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 76vh;
-    width: 60vh;
+    width: 90vh;
 }
 .flexbox{
-    height:90vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,21 +16,39 @@
   }
 
 p{
-    font-size: 2em;
+    font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(70, 69, 69);
+    color:white;
 }
 
 #addCheck{
-    padding: 10px;
-    background-color: #002f5d;
-    color: rgb(184, 183, 183);
-    border: 0;
     position: fixed;
-    bottom: 7%;
-    left: 45%;
-    width: 110px;
-    font-family: Arial, Helvetica, sans-serif;
+    bottom: 2%;
+    left: 33%;
+
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
+}
+
+input[type=submit]{
+    position: fixed;
+    bottom: 2%;
+    right: 33%;
+
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
 }
 
 .addNew{
@@ -42,14 +58,23 @@ p{
     justify-content: center;
 }
 
-#selection{
+
+
+.selection{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+#options{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #questions{
     display: flex;
+    
 }
 
 textarea{
@@ -59,21 +84,13 @@ textarea{
     padding-top: 20%;
     border-collapse: collapse;
     height: 60vh;
-    width:50vh;
+    width: 100vh;
     overflow-y: scroll;
     
 }
 
-input[type=submit]{
-    padding: 10px;
-    background-color: #002f5d;
-    color: rgb(184, 183, 183);
-    border: 0;
-    position: fixed;
-    bottom: 2.5%;
-    left: 45%;
-    width: 110px;
-    font-family: Arial, Helvetica, sans-serif;
+.question{
+    width: 50%; 
 }
 
 #addCheck:hover{
@@ -106,4 +123,7 @@ input[type=radio]{
 }
 #timerinvis{
     visibility: hidden;
+}
+h2{
+    -webkit-text-stroke: 1px black;
 }
