@@ -1,6 +1,5 @@
-@@ -6,27 +6,124 @@ let questionNum = 1;
-    answer = 1
-}*/
+document.getElementById("addCheck").addEventListener('click',addQuestion);
+let questionNum = 1;
 
 function addQuestion(){ //pass parameter of the current elements and add the new one to those
 function addQuestion(){ 
