@@ -11,9 +11,9 @@ function addQuestion(){ //pass parameter of the current elements and add the new
     let qtype = 'qtype' + questionNum;
     let output = `<p>Choose type of question.</p> 
     <input type="radio" id="multchoice" name="qtype" value="multchoice"> 
-    <label for="multchoice">Multiple Choice</label><br> 
+    <label for="multchoice">Multiple Choice</label>
     <input type="radio" id="selectmult" name="qtype" value="selectmult"> 
-    <label for="selectmult">Select Multiple</label><br> 
+    <label for="selectmult">Select Multiple</label>
     <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br> 
     <input type="radio" id="multchoice" name="answers" value="question1">
     <input type="text" name="answers" placeholder="Question 1"/><br> 

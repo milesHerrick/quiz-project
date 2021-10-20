@@ -15,24 +15,43 @@
         <form>
             <div class="initial">
                 <p>Choose type of question.</p>
-                <input type="radio" id="multchoice" name="qtype" value="multchoice">
-                <label for="multchoice">Multiple Choice</label><br>
-                <input type="radio" id="selectmult" name="qtype" value="selectmult">
-                <label for="selectmult">Select Multiple</label><br>
+                <div class = selection>
+                    <label for="multchoice">
+                        <input type="radio" name="qtype" id="multchoice" value="multchoice" />
+                        Multiple Choice
+                      </label>
+                      <label for="selectmult">
+                        <input type="radio" name="qtype" id="selectmult" value="selectmult" />
+                        Select Multiple
+                      </label>
+                </div>
 
                 <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
-
-                <input type="radio" id="multchoice" name="answers" value="question1"><input type="text" name="answers" placeholder="Question 1"/><br>
+                <div class = questions>
+                    <div class = question>
+                        <input type="radio" id="multchoice" name="answers" value="question1">
+                        <input type="text" name="answers" placeholder="Question 1"/>
+                    </div>
+                    
+                    <div class = question> 
+                        <input type="radio" id="selectmult" name="answers" value="question2">
+                        <input type="text" name="answers" placeholder="Question 2"/>    
+                    </div>
+                    
+                    <div class = question>
+                        <input type="radio" id="multchoice" name="answers" value="question3">
+                        <input type="text" name="answers" placeholder="Question 3"/>
+                    </div>
+                    
+                    <div class = question>
+                        <input type="radio" id="selectmult" name="answers" value="question4">
+                        <input type="text" name="answers" placeholder="Question 4"/>
+                    </div>
+                    
+                </div>
                 
-                <input type="radio" id="selectmult" name="answers" value="question2"><input type="text" name="answers" placeholder="Question 2"/><br>
-                
-                <input type="radio" id="multchoice" name="answers" value="question3"><input type="text" name="answers" placeholder="Question 3"/><br>
-                
-                <input type="radio" id="selectmult" name="answers" value="question4"><input type="text" name="answers" placeholder="Question 4"/><br>
-
                 <div id="addNew"></div>
             </div>
-            
                 
             </div>
            <input type="submit" value="Submit Quiz"> 
