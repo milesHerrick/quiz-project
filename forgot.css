@@ -51,3 +51,6 @@ input[type=submit]:hover{
 .email:valid:focus{
     border-color: green;
 }
+h1{
+    font-size: xx-large;
+}
