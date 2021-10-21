@@ -20,7 +20,7 @@ within an allotted time.
 2.Admins view quiz results
 3.Students see quiz scores?
 4.Add timer to taking questions
-5. Add forgot password
+--5. Add forgot password
 6. Better formatting for creating questions
 7.Add ability for short answer questions
 8. Add radio buttons to labels in JS
