@@ -82,14 +82,18 @@ form{
 }
 
 input[type=submit]{
-    padding: 10px;
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
     background-color: #002f5d;
-    color: white;
-    border: 0;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
 }
 
 input[type=submit]:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 
 body{
