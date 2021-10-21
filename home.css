@@ -23,10 +23,9 @@ p {
 }
 
 #joinbtn, #createbtn{
-    padding: 10px;
+    margin: 10px;
     background-color: #002f5d;
     color: #FFFFFF;
-    border: 0;
     font-size: x-large;
     margin: 10px;
     box-sizing: content-box;
@@ -36,7 +35,7 @@ p {
 }
 
 #createbtn:hover, #joinbtn:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 
 #homeCard {

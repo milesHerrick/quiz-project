@@ -33,7 +33,7 @@ li a{
     float: right;
 }
 li a:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 form{
     display: flex;
@@ -54,14 +54,18 @@ input{
 }
 
 input[type=submit]{
-    padding: 10px;
-    border: 0;
-    background-color: #002f5d;;
-    color: white;
+    margin: 10px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 50px;
+    margin-top: 25px;
 }
 
 input[type=submit]:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 
 label{

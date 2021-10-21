@@ -103,7 +103,7 @@ textarea{
     width: 95%;
 }
 .initial {
-    padding-top: 10%;
+    
     border-collapse: collapse;
     height: 60vh;
     width: 100vh;
@@ -118,11 +118,11 @@ textarea{
 
 
 #addCheck:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 
 input[type=submit]:hover{
-    background-color: black;
+    background-color: #004e9c;
 }
 
 form{
