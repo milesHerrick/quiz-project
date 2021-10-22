@@ -65,4 +65,16 @@ h3 {
     width: 15em;
     margin: 2em;
     border-radius: 10px;
+    color: black;
+}
+
+p {
+    margin: 20px;
+}
+
+.join {
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
 }
