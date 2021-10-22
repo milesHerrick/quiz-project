@@ -27,11 +27,13 @@ h1 {
     margin-bottom: 0;
     -webkit-text-stroke: 1px black;
     margin-top: 0;
-    font-size: 3.2em;
+    font-size: 3.45em;
 }
 
 h2 {
     -webkit-text-stroke: 1px black;
+    font-size: 2em;
+    margin: 10px;
 }
 
 .navleft{
@@ -86,4 +88,32 @@ label{
 
 .login {
     align-items: flex-start;
+}
+
+table, th, td {
+    border: 2px solid #002f5d;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.quizTable {
+    margin-bottom: 1em;
+    color: #002f5d;
+}
+
+input[type=submit]{
+    margin: 5px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 35px;
+    margin-top: 10px;
+}
+
+input[type=submit]:hover{
+    background-color: #004e9c;
 }
