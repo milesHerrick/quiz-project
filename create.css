@@ -13,7 +13,9 @@ textarea{
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
+    width: 95%;
 }
+
 .flexbox{
     height: 90vh;
     display: flex;
@@ -86,24 +88,15 @@ input[type=number]{
     /*justify-content: space-evenly;*/
 }
 
-#options{
+.options{
     margin: 0px;
     padding: 0;
     width: 100%;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     margin: 0;
 }
 
-#questions{
-    width: 100%;
-    display: flex;
-    margin-top: 40px;
-}
-
-textarea{
-    width: 95%;
-}
 .initial {
     
     border-collapse: collapse;
@@ -117,7 +110,15 @@ textarea{
     width: 100%; 
 }
 
-
+.shortansbox{
+    width: 100%;
+    color: #002f5d;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+}
 
 #addCheck:hover{
     background-color: #004e9c;
@@ -141,13 +142,17 @@ input[type=radio]{
     color:rgb(70, 69, 69);
 }
 input[type=text]{
-    width: 90%;
+    width: 85%;
     color: #002f5d;
     padding: 6px 10px;
     margin-bottom: 8px;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
+}
+input[type=radio],
+input[type=text] {
+    display: inline
 }
 label{
     font-size: larger;
@@ -159,7 +164,8 @@ label{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    width: 100%;
+    margin-top: 40px;
 }
 #timerinvis{
     visibility: hidden;

@@ -20,42 +20,35 @@
                         <h2>Choose type of question.</h2>
 
                         <div class = "selection">
-                            <label for="multchoice">
-                                <input type="radio" name="qtype" id="multchoice" value="multchoice" />
+                            <label for="multchoice1">
+                                <input type="radio" name="qtype" id="multchoice1" value="multchoice" onclick="replaceshort(this.id)"/>
                                 Multiple Choice
                             </label>
-                            <label for="selectmult">
-                                <input type="radio" name="qtype" id="selectmult" value="selectmult" />
+                            <label for="selectmult1">
+                                <input type="radio" name="qtype" id="selectmult1" value="selectmult" onclick="replaceshort(this.id)"/>
                                 Select Multiple
                             </label>
-                            <label for="shortans">
-                                <input type="radio" name="qtype" id="shortans" value="shortans" />
+                            <label for="shortans1">
+                                <input type="radio" name="qtype" id="shortans1" value="shortans" class="shortans" onclick="replaceanswer(this.id)"/>
                                 Short Answer
                             </label>
                         </div>
 
-                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea><br>
+                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea>
                         
-                        <div id = options class="options">
-                            <div class = question>
-                                <input type="radio" id="multchoice" name="answers" value="question1">
-                                <input type="text" name="answers" placeholder="Answer 1"/>
-                            </div>
+                        <div class="options" id="options1">
                             
-                            <div class = question> 
-                                <input type="radio" id="selectmult" name="answers" value="question2">
-                                <input type="text" name="answers" placeholder="Answer 2"/>   
-                            </div>
+                            <input type="radio" id="answer1" name="answers" value="question1" class="test">
+                            <input type="text" name="answer1" placeholder="Answer 1" id="answer1"/><br>
                             
-                            <div class = question>
-                                <input type="radio" id="multchoice" name="answers" value="question3">
-                                <input type="text" name="answers" placeholder="Answer 3"/>
-                            </div>
+                            <input type="radio" id="answer2" name="answers" value="question2">
+                            <input type="text" id = "answer2" name="answers" placeholder="Answer 2"/><br>   
                             
-                            <div class = question>
-                                <input type="radio" id="selectmult" name="answers" value="question4">
-                                <input type="text" name="answers" placeholder="Answer 4"/>
-                            </div>
+                            <input type="radio" id="answer3" name="answers" value="question3">
+                            <input type="text" id="answer3" name="answer3" placeholder="Answer 3"/><br>
+                            
+                            <input type="radio" id="answer4" name="answers" value="question4">
+                            <input type="text" id="answer4" name="answer4" placeholder="Answer 4"/><br>
                         </div>
                         
 
@@ -66,7 +59,9 @@
                         
                     </div>
                     
-                    <div id="addNew" class="addNew"></div>
+                    <div id="addNew" class="addNew">
+
+                    </div>
                 </div>
                     
                 </div>
