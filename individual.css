@@ -15,3 +15,23 @@
     width: 80%;
     margin-top: 5em;
 }
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    -webkit-text-stroke: 1px black;
+    font-size: 2em;
+}
+
+table, th, td {
+    border: 2px solid #002f5d;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: white;
+    font-size: 1.1em;
+    color: #002f5d;
+}
