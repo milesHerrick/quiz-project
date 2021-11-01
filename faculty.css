@@ -1,0 +1,119 @@
+.admin {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#flexbox{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    margin-top: 5em;
+}
+
+h1 {
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px black;
+    margin-top: 0;
+    font-size: 3.45em;
+}
+
+h2 {
+    -webkit-text-stroke: 1px black;
+    font-size: 2em;
+    margin: 10px;
+}
+
+.navleft{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(70, 69, 69);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navright{
+    position: fixed;
+    width: 50%;
+    top: 0%;
+    right: 0%;
+    background-color: rgb(70, 69, 69);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li a{
+    display: block;
+    color: rgb(184, 183, 183);
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.navleft li{
+    float: left;
+}
+
+.navright li{
+    float: right;
+}
+
+li a:hover{
+    background-color: black;
+}
+
+label{
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(70, 69, 69);
+    -webkit-text-stroke: 1px black;
+}
+
+.login {
+    align-items: flex-start;
+}
+
+table, th, td {
+    border: 2px solid #002f5d;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.quizTable {
+    margin-bottom: 1em;
+    color: #002f5d;
+}
+
+input[type=submit]{
+    margin: 5px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 35px;
+    margin-top: 10px;
+}
+
+input[type=submit]:hover{
+    background-color: #004e9c;
+}
