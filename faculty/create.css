@@ -103,7 +103,7 @@ input[type=number]{
 .initial {
     
     border-collapse: collapse;
-    height: 60vh;
+    max-height:70vh;
     width: 100vh;
     overflow-y: scroll;
 }
@@ -177,4 +177,10 @@ h2{
     font-size: 2em;
     -webkit-text-stroke: 1px black;
     margin: 10px;
+}
+
+select{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 3px;
 }

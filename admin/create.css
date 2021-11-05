@@ -175,3 +175,9 @@ h2{
     -webkit-text-stroke: 1px black;
     margin: 10px;
 }
+
+select{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 3px;
+}
