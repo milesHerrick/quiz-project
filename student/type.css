@@ -1,0 +1,92 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+  }
+  
+  .prompt {
+    text-align: center;
+    padding: 20px;	
+    min-height: 0%;
+  }
+  
+  .answers{
+    top: 20%;
+    padding: 0;
+    border-collapse: collapse;
+    height: 60vh;
+  }
+  
+  body{
+    background-position: center;
+  }
+  
+  #option-buttons {
+    padding: 0 30px 0;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+      width: 50%;
+  }
+  
+  .button {
+    padding: 10px;
+  }
+  
+  section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  section > div {
+    flex: 1;
+    padding: 0;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    height: 100%;
+    display: block;
+    background: white;
+    border: 3px solid #002f5d;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    color: #205a94;
+  }
+  
+  input[type="radio"]:checked + label {
+    background: #205a94;
+    color: hsla(215, 0%, 100%, 1);
+  }
+  
+  p {
+    font-weight: 900;
+  }
+  
+  input[type=submit]{
+    margin: 5px;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    background-color: #002f5d;
+    color:white;
+    border-radius: .25em;
+    height: 35px;
+    margin-top: 0;
+  }
+  
+  input[type=submit]:hover{
+    background-color: #004e9c;
+  }
