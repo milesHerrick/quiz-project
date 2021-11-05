@@ -29,6 +29,16 @@
             <label for="password">Password:</label><br>
             <input type="text" id="password" class="password" name="password"><br>
             <a href="login.html">Already have an account?</a><br>
+            <div class = "selection">
+                <label for="multchoice1">
+                    <input type="radio" name="qtype" id="student" value="student" onclick="replaceshort(this.id)"/>
+                    Student
+                </label>
+                <label for="admin">
+                    <input type="radio" name="qtype" id="admin" value="admin" onclick="replaceshort(this.id)"/>
+                    Admin
+                </label>
+            </div>
             <input type="button" value="Sign Up" id="enter">
         </form>
     </div>
