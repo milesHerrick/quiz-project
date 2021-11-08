@@ -90,3 +90,19 @@ input[type=submit]{
 input[type=submit]:hover{
   background-color: #004e9c;
 }
+.timer{
+  text-align: center;
+  background-color: white;
+  color: black;
+  position: fixed;
+  right: 50px;
+  top: 100px;
+  width: 50px;
+  height: 50px;
+}
+.questionnum{
+  position: fixed;
+  left: 50px;
+  top: 100px;
+  -webkit-text-stroke: 1.25px black;
+}
