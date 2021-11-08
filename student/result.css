@@ -25,6 +25,11 @@ h2 {
     font-size: 4.2em;
 }
 
+h3 {
+    -webkit-text-stroke: .8px black;
+    font-size: 2em;
+}
+
 input[type=submit]{
     margin: 5px;
     box-sizing: content-box;
