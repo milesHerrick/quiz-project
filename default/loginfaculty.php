@@ -15,8 +15,8 @@
             <li><a href="home.html">Home</a></li>
         </ul>
         <ul class="navright">
-            <li><a href="SignUp.html">Sign Up</a></li>
-            <li><a href="Login.html">Log In</a></li>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li><a href="login.php">Log In</a></li>
         </ul>
     </div>
     <div class="box">
@@ -29,8 +29,8 @@
                 <input type="text" id="password" class="password" name="password"><br>
                 <a href="signup.php">Create Account?</a><br>
                 <a href="forgot.html">Forgot Password?</a><br>
-                <a href="loginadmin.html">Log in as Admin?</a><br>
-                <a href="login.html">Log in as Student?</a><br>
+                <a href="loginadmin.php">Log in as Admin?</a><br>
+                <a href="login.php">Log in as Student?</a><br>
                 <input type="submit" value="Sign In">
             </form>
         </div>
