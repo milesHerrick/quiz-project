@@ -28,8 +28,8 @@
                 <input type="text" id="password" class="password" name="password"><br>
                 <a href="signup.php">Create Account?</a><br>
                 <a href="forgot.html">Forgot Password?</a><br>
-                <a href="loginadmin.html">Log in as Admin?</a><br>
-                <a href="loginfaculty.html">Log in as Faculty?</a><br>
+                <a href="loginadmin.php">Log in as Admin?</a><br>
+                <a href="loginfaculty.php">Log in as Faculty?</a><br>
                 <input type="submit" value="Sign In">
             </form>
         </div>
