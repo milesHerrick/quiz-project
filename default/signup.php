@@ -62,7 +62,6 @@ include("connect.php");
 			VALUES ('$username', '$password')";
 		}
 	}
-	echo $qtype;
 
 	if(mysqli_query($con,$sql)){
 		header("Location: login.php");
