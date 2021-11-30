@@ -14,8 +14,8 @@
             <li><a href="home.html">Home</a></li>
         </ul>
         <ul class="navright">
-            <li><a href="SignUp.html">Sign Up</a></li>
-            <li><a href="Login.html">Log In</a></li>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li><a href="login.php">Log In</a></li>
         </ul>
     </div>
     <div class="box">
