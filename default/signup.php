@@ -15,8 +15,8 @@
             <li><a href="home.html">Home</a></li>
         </ul>
         <ul class="navright">
-            <li><a href="SignUp.html">Sign Up</a></li>
-            <li><a href="Login.html">Log In</a></li>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li><a href="login.php">Log In</a></li>
         </ul>
     </div>
     <div>
@@ -65,7 +65,7 @@ include("connect.php");
 	echo $qtype;
 
 	if(mysqli_query($con,$sql)){
-		header("Location: login.html");
+		header("Location: login.php");
 	}
 
 mysqli_close($con);
