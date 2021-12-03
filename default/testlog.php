@@ -71,7 +71,7 @@ include("connect.php");
 
                     if($user_data['password'] === $password){
                         $_SESSION['studentID'] = $user_data['studentID'];
-                        header("Location: /QuizManager/quiz-project-main/student/join.html");
+                        header("Location: /quiz-project-main/student/join.html");
                     }
                 }
             }
@@ -86,7 +86,7 @@ include("connect.php");
                          
                     if($user_data['password'] === $password){
                         $_SESSION['facultyID'] = $user_data['facultyID'];
-                        header("Location: /QuizManager/quiz-project-main/faculty/home.html");
+                        header("Location:/quiz-project-main/faculty/home.html");
                     }
                 }
             }
@@ -100,7 +100,7 @@ include("connect.php");
                          
                     if($user_data['password'] === $password){
                         $_SESSION['adminID'] = $user_data['adminID'];
-                        header("Location: /QuizManager/quiz-project-main/admin/home.html");
+                        header("Location: quiz-project-main/admin/home.html");
                     }
                 }
             }
