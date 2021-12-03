@@ -21,7 +21,7 @@
     <div>
     <div class="create">
         
-        <form action = "signup.php" method = "POST">
+        <form action = "testlog.php" method = "POST">
             <div class = "selection">
                 <label for="student">
                     <input type="radio" name="qtype" id="student" value="student" onclick="replaceshort(this.id)" checked/>
