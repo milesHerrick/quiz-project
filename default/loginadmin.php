@@ -57,7 +57,7 @@
 				
 				if($user_data['password'] === $password){
 					$_SESSION['adminID'] = $user_data['adminID'];
-					header("Location:/quiz-project-main/faculty/home.html");
+					header("Location:/quiz-project-main/admin/home.html");
 				}
 			}
 		}
