@@ -28,7 +28,6 @@
   flex-flow: column;
   height: 40%;
   width: 70%;
-  background-color : white;
 }
 
 .team {
@@ -61,13 +60,11 @@
   height: 80%;
   width: 70%;
   padding: 5vh;
-  background-color: black;
 }
 
 #top{
   width: 100%;
   height: 40%;
-  background-color: cadetblue;
   display: flex;
   flex-flow: row;
 }
@@ -100,7 +97,6 @@
 #multipleAnswers{
   height: 30%;
   width: 100%;
-  background-color: blue;
   padding: 10px;
   display: flex;
   flex-flow: row;
@@ -115,8 +111,6 @@
   flex-flow: row;
   padding: 15px;
   width: 45%;
-  background-color: indianred;
-  border: 2px solid gold;
   margin-top: 10px;
 }
 
@@ -124,7 +118,6 @@
 #btns{
   display: flex;
   margin-top: 5%;
-  background-color: white;
   width: 50%;
   justify-content: space-around;
 }
@@ -135,7 +128,6 @@
 
 #shortAnswers {
   height: 50%;
-  background-color: blue;
   padding: 10px;
   display: none;
   flex-flow: column;
