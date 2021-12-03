@@ -1,0 +1,107 @@
+html{
+    color: black;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    height: 90vh;
+    width: 100%;
+
+    background-color: gray;
+}
+
+#display{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+    width: 70%;
+    padding: 5vh;
+    background-color: black;
+}
+
+#myform{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#prompt{
+    height: 10vh;
+    width: 90%;
+    border-radius: 5px;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+#question{
+    background-color: red;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#multipleAnswers{
+    height: 50%;
+    background-color: blue;
+    padding: 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#shortAnswers {
+    height: 50%;
+    background-color: blue;
+    padding: 10px;
+    display: none;
+    flex-flow: column;
+}
+
+#shortPrompt {
+    height: 5vh;
+    width: 55vw;
+    border-radius: 5px;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+
+.answer {
+    padding: 15px;
+    width: 45%;
+    background-color: indianred;
+}
+
+.answer input[type=text]{
+    width: 85%;
+    height: 3vh;
+    border-radius: 5px;
+}
+
+
+#btns{
+    display: flex;
+    margin-top: 10%;
+    background-color: white;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#btns > button {
+    padding: 10px;
+}
+
+
+textarea{
+    resize: none;
+}

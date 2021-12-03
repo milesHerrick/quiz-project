@@ -1,311 +1,148 @@
-document.getElementById("addCheck").addEventListener('click',addQuestion);
-let questionNum = 1;
+var addbtn = document.getElementById('addQuestion');
+var submitbtn = document.getElementById('submit');
 
-//Replaces question boxes with short answer box
-function replaceanswer(event){
-    
-    let num = event.substring(8);
-    let stringtonum = parseInt(num, 10);
-    let basenum = ((stringtonum-1)*4)+1;
+var questionArr = [];
+var qnum = 1;
+var questionType = 'single';
+var textAreas = document.getElementsByClassName('textprompt');
+var textInput = document.getElementsByClassName('ansText');
+var quizID = Math.floor(100000 + Math.random() * 900000);
 
-    let shortname = 'shortansbox' + stringtonum;
-    let optionsid = "options" + stringtonum;
-    
-    var shortansbox = document.createElement("textarea");
-    shortansbox.setAttribute("id", shortname);
-    shortansbox.setAttribute("class", "shortansbox");
-    shortansbox.setAttribute("rows", "5");
-    shortansbox.setAttribute("name", "shortansbox");
-    shortansbox.setAttribute("Placeholder", "Enter a rough summation of what the answer should be:");
-    document.getElementById(optionsid).replaceWith(shortansbox);    
+addbtn.onclick = function () {addQuestion()};
+submitbtn.onclick = function () {submitQuestions()};
+
+function addQuestion() {
+    var tempQuestion = [];
+
+
+    tempQuestion.push(quizID);
+
+    tempQuestion.push(document.getElementById('prompt').value);
+
+    // get the checked radio button
+    var temp = document.getElementsByClassName('qtype');
+    for(var i = 0; temp[i]; i++) {
+        if(temp[i].checked) {
+            tempQuestion.push(temp[i].id);
+        }
+    }
+
+    temp = document.getElementsByClassName('ansText');
+
+
+    if(questionType !== 'shortanswer') {
+        for(var i = 0; temp[i]; i++) {
+            tempQuestion.push(temp[i].value);
+        }
+
+        temp = document.getElementsByName('ansQ');
+
+        var sol = [];
+        for (var i = 0; temp[i]; i++) {
+            if (temp[i].checked) {
+                sol.push(temp[i].value);
+            }
+        }
+        tempQuestion.push(sol);
+        console.log(sol.value);
+    }
+    else {
+        tempQuestion.push(document.getElementById('shortPrompt').value);
+        for(var i = 0; i<3; i++) {
+            tempQuestion.push('');
+        }
+        tempQuestion.push([0]);
+    }
+
+    questionArr.push(tempQuestion);
+    document.getElementById('myform').reset;
+    console.log(questionArr);
+    console.log(questionType);
+    qnum++;
+    for(var i = 0; textAreas[i]; i++) {
+        textAreas[i].value = '';
+    }
+    for(var i = 0; textInput[i]; i++){
+        textInput[i].value = '';
+    }
+    document.getElementById('qNum').innerText = "Question " + qnum;
 }
 
-//Replaces short answer box with multiple choice boxes
-function replaceshort(radioid){
-    let num = radioid.substring(10);
-    let stringtonum = parseInt(num, 10);
-    let basenum = ((stringtonum-1)*4)+1;
-    var linebreak = document.createElement("br");
+function submitQuestions() {
+    //push questionArr to database
+    let xhr;
+    let url = "submit.php"; // this should probably be different depending on what you have
 
-    let shortname = "shortansbox" + stringtonum;
-    //Finds what numbers the answers are throughout the entire quiz
-    let ans1 = "answer" + basenum;
-    let ans2 = "answer" + (basenum + 1);
-    let ans3 = "answer" + (basenum + 2);
-    let ans4 = "answer" + (basenum + 3);
+    for(var i = 0; questionArr[i]; i++) {
+        xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Quiz", "quiz/json");
 
-    let options = "options" + stringtonum;
-    let answers = "answers" + stringtonum;
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Print received data from server
+                console.log(this.responseText);
+            }
+        };
 
-    var optionsdiv = document.createElement("div");
-    optionsdiv.setAttribute("class", "options");
-    optionsdiv.setAttribute("id", options);
+        var data = JSON.stringify({
+            "qID": questionArr[i][0],
+            "prompt": questionArr[i][1],
+            "qtype": questionArr[i][2],
+            "ans1": questionArr[i][3],
+            "ans2": questionArr[i][4],
+            "ans3": questionArr[i][5],
+            "ans4": questionArr[i][6],
+            "solutions": questionArr[i][7].toString()
+        });
+        console.log(data);
+        console.log("Iteration " + i);
+        console.log(xhr.send(data));
+    }
 
-    var questionone = document.createElement("input");
-    questionone.setAttribute("type", "radio");
-    questionone.setAttribute("id", ans1);
-    questionone.setAttribute("name", answers);
-    questionone.setAttribute("value", "question1");
-    
-    var questiononelabel = document.createElement("input");
-    questiononelabel.setAttribute("type", "text");
-    questiononelabel.setAttribute("id", ans1);
-    questiononelabel.setAttribute("name", answers);
-    questiononelabel.setAttribute("placeholder", "Answer 1");
-              
-    var questiontwo = document.createElement("input");
-    questiontwo.setAttribute("type", "radio");
-    questiontwo.setAttribute("id", ans2);
-    questiontwo.setAttribute("name", answers);
-    questiontwo.setAttribute("value", "question2");
-    
-    var questiontwolabel = document.createElement("input");
-    questiontwolabel.setAttribute("type", "text");
-    questiontwolabel.setAttribute("name", answers);
-    questiontwolabel.setAttribute("id", ans2);
-    questiontwolabel.setAttribute("placeholder", "Answer 2");
-    
-    var questionthree = document.createElement("input");
-    questionthree.setAttribute("type", "radio");
-    questionthree.setAttribute("id", ans3);
-    questionthree.setAttribute("name", answers);
-    questionthree.setAttribute("value", "question3");
-    
-    var questionthreelabel = document.createElement("input");
-    questionthreelabel.setAttribute("type", "text");
-    questionthreelabel.setAttribute("id", ans3);
-    questionthreelabel.setAttribute("name", answers);
-    questionthreelabel.setAttribute("placeholder", "Answer 3");
-    
-    var questionfour = document.createElement("input");
-    questionfour.setAttribute("type", "radio");
-    questionfour.setAttribute("id", ans4);
-    questionfour.setAttribute("name", answers);
-    questionfour.setAttribute("value", "question4");
-    
-    var questionfourlabel = document.createElement("input");
-    questionfourlabel.setAttribute("type", "text");
-    questionfourlabel.setAttribute("id", ans4);
-    questionfourlabel.setAttribute("name", answers);
-    questionfourlabel.setAttribute("placeholder", "Answer 4");
-    
-    //Append everything
+    alert("Quiz stored successfully. Your access code is: " + quizID);
 
-    optionsdiv.appendChild(questionone);
-    optionsdiv.appendChild(questiononelabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-    
-    optionsdiv.appendChild(questiontwo);
-    optionsdiv.appendChild(questiontwolabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-    
-    optionsdiv.appendChild(questionthree);
-    optionsdiv.appendChild(questionthreelabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-    
-    optionsdiv.appendChild(questionfour);
-    optionsdiv.appendChild(questionfourlabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-    
-    document.getElementById(shortname).replaceWith(optionsdiv);
 
 }
 
-function addQuestion(){ 
-    questionNum++;
-    //let shortansbox = "shortansbox" + questionNum;
-    let options = 'options' + questionNum;
-    let shortans = 'shortans' + questionNum;
-    let selectmult = 'selectmult' + questionNum;
-    let multchoice = 'multchoice' + questionNum;
-    let qtype = 'qtype' + questionNum;
-    let description = 'description' + questionNum;
-    let answers = 'answers' + questionNum;
-    var linebreak = document.createElement("br");
 
-    let answer1 = "answer" + (((questionNum - 1) * 4) + 1);
-    let answer2 = "answer" + (((questionNum - 1) * 4) + 2);
-    let answer3 = "answer" + (((questionNum - 1) * 4) + 3);
-    let answer4 = "answer" + (((questionNum - 1) * 4) + 4);
 
-    //Creates the new divs
-    var questionsdiv = document.createElement("div");
-    questionsdiv.setAttribute("class", "questions");
-    questionsdiv.setAttribute("id", "questions");
+function showShort(radio) {
+    var single = document.getElementById('multipleAnswers');
+    var short = document.getElementById("shortAnswers");
+    if (radio.checked === true && radio.id === 'short') {
+        single.style.display = "none" ;
+        short.style.display = "flex";
+        questionType = 'shortanswer';
+    }
+    else {
+        single.style.display = "flex";
+        short.style.display = "none";
+        if(radio.checked === true) {
+            var typeRadio = document.getElementsByName('ansQ');
 
-    var selectDiv = document.createElement("div");
-    selectDiv.setAttribute("class", "selection");
+            if(radio.id === 'single') {
+                for(var i = 0; typeRadio[i]; i++) {
+                    typeRadio[i].type = 'radio';
+                }
+                questionType = 'single';
 
-    var optionsdiv = document.createElement("div");
-    optionsdiv.setAttribute("class", "options");
-    optionsdiv.setAttribute("id", options);
-    optionsdiv.setAttribute("name", questionNum);
+            }
+            else if(radio.id === 'multiple') {
+                for(var i = 0; typeRadio[i]; i++) {
+                    typeRadio[i].type = 'checkbox';
+                }
+                questionType = 'multiple';
+            }
+        }
 
-    //Appends the text to the top
-    var choosetext = document.createElement("h2");
-    var t = document.createTextNode("Choose type of question.");
-    choosetext.appendChild(t);
-    
-    //Creates new question type radio buttons and labels
-    var multradio = document.createElement("input");
-    multradio.setAttribute("type", "radio");
-    multradio.setAttribute("id", multchoice);
-    multradio.setAttribute("name", qtype);
-    multradio.setAttribute("value", multchoice);
-    multradio.setAttribute("onclick", "replaceshort(this.id)")
-
-    var multlabel = document.createElement("label");
-    multlabel.setAttribute("for", multchoice)
-    multlabel.htmlFor = multchoice;
-    multlabel.innerHTML = "Multiple Choice";
-
-    var selectradio = document.createElement("input");
-    selectradio.setAttribute("type", "radio");
-    selectradio.setAttribute("id", selectmult);
-    selectradio.setAttribute("name", qtype);
-    selectradio.setAttribute("value", selectmult);
-    selectradio.setAttribute("onclick", "replaceshort(this.id)")
-
-    var selectlabel = document.createElement("label");
-    selectlabel.htmlFor = selectmult;
-    selectlabel.innerHTML = "Select Multiple";
-
-    //short answer
-    var shortradio = document.createElement("input");
-    shortradio.setAttribute("type", "radio");
-    shortradio.setAttribute("id", shortans);
-    shortradio.setAttribute("name", qtype);
-    shortradio.setAttribute("value", shortans);
-    shortradio.setAttribute("class", "shortans");
-    shortradio.setAttribute("onclick", "replaceanswer(this.id)")
-
-    var shortlabel = document.createElement("label");
-    shortlabel.htmlFor = shortans;
-    shortlabel.innerHTML = "Short Answer";
-    shortlabel.setAttribute("for", shortans);
-
-    //Creates new description area
-    var textarea = document.createElement("textarea");
-    textarea.setAttribute("id", "description");
-    textarea.setAttribute("name", description);
-    textarea.setAttribute("rows", "10");
-    textarea.setAttribute("cols", "40");
-    textarea.setAttribute("placeholder", "Enter description of question:");
-
-    //Probably going to have to change around id values when setting up database
-    //Creates new question answer areas
-    var questionone = document.createElement("input");
-    questionone.setAttribute("type", "radio");
-    questionone.setAttribute("id", answer1);
-    questionone.setAttribute("name", answers);
-    questionone.setAttribute("value", "question1");
-    
-    var questiononelabel = document.createElement("input");
-    questiononelabel.setAttribute("type", "text");
-    questiononelabel.setAttribute("id", answer1);
-    questiononelabel.setAttribute("name", answers);
-    questiononelabel.setAttribute("placeholder", "Answer 1");
-                  
-    var questiontwo = document.createElement("input");
-    questiontwo.setAttribute("type", "radio");
-    questiontwo.setAttribute("id", answer2);
-    questiontwo.setAttribute("name", answers);
-    questiontwo.setAttribute("value", "question2");
-
-    var questiontwolabel = document.createElement("input");
-    questiontwolabel.setAttribute("type", "text");
-    questiontwolabel.setAttribute("name", answers);
-    questiontwolabel.setAttribute("id", answer2);
-    questiontwolabel.setAttribute("placeholder", "Answer 2");
-
-    var questionthree = document.createElement("input");
-    questionthree.setAttribute("type", "radio");
-    questionthree.setAttribute("id", answer3);
-    questionthree.setAttribute("name", answers);
-    questionthree.setAttribute("value", "question3");
-
-    var questionthreelabel = document.createElement("input");
-    questionthreelabel.setAttribute("type", "text");
-    questionthreelabel.setAttribute("id", answer3);
-    questionthreelabel.setAttribute("name", answers);
-    questionthreelabel.setAttribute("placeholder", "Answer 3");
-
-    var questionfour = document.createElement("input");
-    questionfour.setAttribute("type", "radio");
-    questionfour.setAttribute("id", answer4);
-    questionfour.setAttribute("name", answers);
-    questionfour.setAttribute("value", "question4");
-
-    var questionfourlabel = document.createElement("input");
-    questionfourlabel.setAttribute("type", "text");
-    questionfourlabel.setAttribute("id", answer4);
-    questionfourlabel.setAttribute("name", answers);
-    questionfourlabel.setAttribute("placeholder", "Answer 4");
-
-    var timerdiv = document.createElement("div");
-    timerdiv.setAttribute("class", "timer");
-
-    var timerinvis = document.createElement("input");
-    timerinvis.setAttribute("type", "radio");
-    timerinvis.setAttribute("id", "timerinvis");
-    timerinvis.setAttribute("name", "timerinvis");
-    timerinvis.setAttribute("value", "timerinvis");
-
-    var timer = document.createElement("input");
-    timer.setAttribute("type", "number");
-    timer.setAttribute("name", "timer");
-    timer.setAttribute("placeholder", "Time For This Question");
-
-    //Puts all of the new inputs and labels into the HTML file
-    questionsdiv.appendChild(choosetext);
-
-    selectDiv.appendChild(multradio);
-    selectDiv.appendChild(multlabel);
-    selectDiv.appendChild(selectradio);
-    selectDiv.appendChild(selectlabel);
-    selectDiv.appendChild(shortradio);
-    selectDiv.appendChild(shortlabel);
-    selectDiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-    questionsdiv.appendChild(selectDiv);
-
-    questionsdiv.appendChild(textarea);
-    questionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    optionsdiv.appendChild(questionone);
-    optionsdiv.appendChild(questiononelabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    optionsdiv.appendChild(questiontwo);
-    optionsdiv.appendChild(questiontwolabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    optionsdiv.appendChild(questionthree);
-    optionsdiv.appendChild(questionthreelabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    optionsdiv.appendChild(questionfour);
-    optionsdiv.appendChild(questionfourlabel);
-    optionsdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    questionsdiv.appendChild(optionsdiv);
-
-    timerdiv.appendChild(timerinvis);
-    timerdiv.appendChild(timer);
-    timerdiv.appendChild(linebreak);
-    linebreak = document.createElement("br");
-
-    questionsdiv.appendChild(timerdiv);
-
-    document.getElementById("addNew").appendChild(questionsdiv);
-
+    }
 }
+
+
+
+
+
+
+
+
