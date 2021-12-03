@@ -31,17 +31,23 @@
         <div id="question">
             <h1 id="qNum"> Question 1</h1>
             <form method="post" id = "myform">
-                <label for="prompt">What is the Question?</label>
+                <label for="prompt" id="head">What is the Question?</label>
                 <br>
                 <textarea class = "textprompt" id="prompt" name="prompt" placeholder="Enter Question Prompt..."></textarea>
                 <br>
                 <div id="qtype">
-                    <label for="multiple">Multiple Choice</label>
-                    <input type="radio" name="type" id="single" class="qtype" onclick="showShort(this);">
-                    <label for="multiple">Select Multiple</label>
-                    <input type="radio" name="type" id="multiple" class="qtype" onclick="showShort(this);">
-                    <label for="short">Short Answer</label>
-                    <input type="radio" name="type" id="short" class="qtype" onclick="showShort(this);">
+                    <div>
+                        <label for="multiple">Multiple Choice</label>
+                        <input type="radio" name="type" id="single" class="qtype" onclick="showShort(this);">
+                    </div>
+                    <div>
+                        <label for="multiple">Select Multiple</label>
+                        <input type="radio" name="type" id="multiple" class="qtype" onclick="showShort(this);">
+                    </div>
+                    <div>
+                        <label for="short">Short Answer</label>
+                        <input type="radio" name="type" id="short" class="qtype" onclick="showShort(this);">
+                    </div>
                 </div>
                 <br>
                 <div id="multipleAnswers">

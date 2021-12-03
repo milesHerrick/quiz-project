@@ -9,8 +9,6 @@ html{
     margin-top: 10vh;
     height: 90vh;
     width: 100%;
-
-    background-color: gray;
 }
 
 #display{
@@ -20,7 +18,6 @@ html{
     height: 80%;
     width: 70%;
     padding: 5vh;
-    background-color: black;
 }
 
 #myform{
@@ -40,7 +37,6 @@ html{
 }
 
 #question{
-    background-color: red;
     width: 90%;
     padding: 10px;
     display: flex;
@@ -51,7 +47,6 @@ html{
 
 #multipleAnswers{
     height: 50%;
-    background-color: blue;
     padding: 10px;
     display: flex;
     flex-flow: row;
@@ -61,7 +56,6 @@ html{
 
 #shortAnswers {
     height: 50%;
-    background-color: blue;
     padding: 10px;
     display: none;
     flex-flow: column;
@@ -79,7 +73,6 @@ html{
 .answer {
     padding: 15px;
     width: 45%;
-    background-color: indianred;
 }
 
 .answer input[type=text]{
@@ -91,8 +84,6 @@ html{
 
 #btns{
     display: flex;
-    margin-top: 10%;
-    background-color: white;
     width: 50%;
     justify-content: space-around;
 }
@@ -104,4 +95,29 @@ html{
 
 textarea{
     resize: none;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+#head {
+    font-size: 2em;
+    -webkit-text-stroke: .9px black;
+}
+
+#qtype {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-size: 1.4em;
+    -webkit-text-stroke: .55px black;
+}
+
+#submit, #addQuestion {
+    background-color: #002f5d;
+    color: #FFFFFF;
+    font-size: x-large;
+    font-size: 1.5em;
+    border-radius: .25em;
 }
