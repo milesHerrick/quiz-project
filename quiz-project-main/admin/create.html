@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quiz</title>
+    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="../global.css">
+    <script defer src="create.js"></script>
+    <script defer src="logout.js"></script>
+    <script defer src="newquiz.js"></script>
+</head>
+<body>
+    <div class="flexbox">
+        <div class="container"> <!--Multiple choice or select multiple, enter question, enter answers (4), add another question (submit button at the end will submit everything in the form)-->
+            <form>
+                <div class="initial">
+                    
+                    <div class = "questions">
+
+                        <h2>Select course this quiz belongs to:</h2>
+                        <select name="courses" id="courses">
+                            <option value="Algorithms">Algorithms</option>
+                            <option value="Web Systems">Web Systems</option>
+                            <option value="Programming Languages">Prog Languages</option>
+                          </select>
+                        
+                        <h2>Choose type of question.</h2>
+
+                        <div class = "selection">
+                            <label for="multchoice1">
+                                <input type="radio" name="qtype" id="multchoice1" value="multchoice" onclick="replaceshort(this.id)"/>
+                                Multiple Choice
+                            </label>
+                            <label for="selectmult1">
+                                <input type="radio" name="qtype" id="selectmult1" value="selectmult" onclick="replaceshort(this.id)"/>
+                                Select Multiple
+                            </label>
+                            <label for="shortans1">
+                                <input type="radio" name="qtype" id="shortans1" value="shortans" class="shortans" onclick="replaceanswer(this.id)"/>
+                                Short Answer
+                            </label>
+                        </div>
+
+                        <textarea id="description" name="description" rows="10" cols="40" placeholder="Enter description of question:"></textarea>
+                        
+                        <div class="options" id="options1">
+                            
+                            <input type="radio" id="answer1" name="answers" value="question1" class="test">
+                            <input type="text" name="answer1" placeholder="Answer 1" id="answer1"/><br>
+                            
+                            <input type="radio" id="answer2" name="answers" value="question2">
+                            <input type="text" id = "answer2" name="answers" placeholder="Answer 2"/><br>   
+                            
+                            <input type="radio" id="answer3" name="answers" value="question3">
+                            <input type="text" id="answer3" name="answer3" placeholder="Answer 3"/><br>
+                            
+                            <input type="radio" id="answer4" name="answers" value="question4">
+                            <input type="text" id="answer4" name="answer4" placeholder="Answer 4"/><br>
+                        </div>
+                        
+
+                        <div class = timer>
+                            <input type="radio" id="timerinvis" name="timerinvis" value="timerinvis">
+                            <input type="number" name="timer" class="timer1" placeholder="Time For Question in Minutes"/>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="addNew" class="addNew">
+
+                    </div>
+                </div>
+                    
+                </div>
+            <input id="done" type="submit" value="Submit Quiz"> 
+            </form>
+            
+            <div>
+                <ul class="navleft">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="create.html">Create</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+                <ul class="navright">
+                    <li id="out"><a>Sign Out</a></li>
+                </ul>
+        </div>
+        <button id="addCheck">Add Question</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../global.css">
+	<script defer src="logout.js"></script>
+</head>
+<body>
+    <div>
+        <ul class="navleft">
+            <li><a href="home.html">Home</a></li>
+			<li><a href="create.html">Create</a></li>
+            <li><a href="faculty.php">Faculty</a></li>
+        </ul>
+        <ul class="navright">
+            <li id="out"><a>Sign Out</a></li>
+        </ul>
+    </div>
+	<div id="flexbox">
+		<div id ="container">
+			<div id="homeCard">
+				<div id="homeCardText">
+					<h1>
+					Welcome to QuizMaster!
+					</h1>
+					<p>Here at QuizMaster you can take and create quizzes!</p>
+					<p>You can create or manage quizzes!</p>
+				</div>
+				
+				<div id="homeButtons">
+					<form action="create.html">
+						<input type = "submit" id = "joinbtn" value = "Create Quiz"> 
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="faculty.css">
+    <link rel="stylesheet" href="../global.css">
+    <script defer src="logout.js"></script>
+</head>
+<body>
+    <div>
+        <ul class="navleft">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="create.html">Create</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+        <ul class="navright">
+            <li id="out"><a>Sign Out</a></li>
+        </ul>
+    </div>
+   <div id = "flexbox">
+        <div id="container">
+            <div class="login">
+                <h1>Faculty Tools</h1>
+                <h2>Active Quiz: <i>Attendance Quiz</i></h2>
+                <h3>Quiz Subject: <I>Programming Languages</I></h3>
+            </div>
+            <div class="quizTable">
+                <table>
+                    <tr>
+                       <th>Username</th>
+                       <th>Team</th>
+                       <th>Current Score</th>
+                    </tr>
+                    <tr>
+                        <td>ChaseSylla</td>
+                        <td>Team 1</td>
+                        <td>1*/2</td>
+                    </tr>
+                    <tr>
+                        <td>TerryTumen</td>
+                        <td>Team 2</td>
+                        <td>1*/2</td>
+                    </tr>
+                    <tr>
+                        <td>BenHallis</td>
+                        <td>Team 1</td>
+                        <td>1*/2</td>
+                    </tr>
+                    <tr>
+                        <td>CaseyChadwick</td>
+                        <td>Team 2</td>
+                        <td>1*/2</td>
+                    </tr>
+                    <tr>
+                        <td>MilesHerrick</td>
+                        <td>Team 1</td>
+                        <td>1*/2</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Quiz Status: <i>Live</i></th>
+                     </tr>
+                </table>
+            </div>
+            <h3><I>One or more questions are awaiting a grade.</I></h3>
+            <div class="adminButtons">
+                <form>
+                    <input type = "submit" id = "stopbtn" value = "Stop Current Quiz"> 
+                    <input type = "submit" id = "resumebtn" value = "Resume Current Quiz"> 
+                </form>
+            </div>
+            <div class="login">
+                <h2>Previous Quiz Results:</h2>
+            </div>
+            <div class="quizTable">
+                <table>
+                    <tr>
+                        <th colspan="3"><i>Previous Quiz: </i> Quiz 3 (Programming Languages)</th>
+                    </tr>
+                    <tr>
+                       <th>Username</th> 
+                       <th>Team</th> 
+                       <th>Current Score</th> 
+                    </tr>
+                    <tr>
+                        <td>ChaseSylla</td>
+                        <td>Team 1</td>
+                        <td>1/1</td>
+                    </tr>
+                    <tr>
+                        <td>TerryTumen</td>
+                        <td>Team 2</td>
+                        <td>1/1</td>
+                    </tr>
+                    <tr>
+                        <td>BenHallis</td>
+                        <td>Team 1</td>
+                        <td>0/1</td>
+                    </tr>
+                    <tr>
+                        <td>CaseyChadwick</td>
+                        <td>Team 2</td>
+                        <td>1/1</td>
+                    </tr>
+                    <tr>
+                        <td>MilesHerrick</td>
+                        <td>Team 1</td>
+                        <td>0/1</td>
+                    </tr>
+                    <tr>
+                        <th>Highest Score</th> 
+                        <th>Lowest Score</th> 
+                        <th>Average Score</th> 
+                    </tr>
+                    <tr>
+                        <td>1/1</td>
+                        <td>0/1</td>
+                        <td>0.6/1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="adminButtons">
+                <form action="individual.html">
+                    <input type = "submit" id = "morebtn" value = "See Indivual's Answers"> 
+                </form>
+            </div>
+        </div>
+   </div>
+        
+
+    
+</body>
+</html>
